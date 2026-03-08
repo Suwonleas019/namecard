@@ -44,5 +44,23 @@ namespace WinFormsApp3
                 MessageBox.Show("오류가 발생했습니다: " + ex.Message);
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+            if (pictureBox1.Tag == null || pictureBox1.Tag.ToString() == "ini1")
+            {
+               
+                pictureBox1.Image = Properties.Resources.ini2;
+                pictureBox1.Tag = "ini2";
+            }
+            else
+            {
+               
+                pictureBox1.Image = Properties.Resources.ini1;
+                pictureBox1.Tag = "ini1";
+            }
+        }
     }
 }
+

@@ -65,12 +65,13 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(60, 58);
+            pictureBox1.Location = new Point(12, 37);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(233, 329);
+            pictureBox1.Size = new Size(281, 336);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // label1
             // 
