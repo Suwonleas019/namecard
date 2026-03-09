@@ -31,11 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             button1 = new Button();
             김수환 = new Label();
-            pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             button2 = new Button();
+            button3 = new Button();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -62,17 +63,6 @@
             김수환.TabIndex = 1;
             김수환.Text = "수원대　컴퓨터ＳＷ학과";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 37);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(281, 336);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -88,7 +78,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("맑은 고딕", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            label2.ForeColor = Color.Lime;
+            label2.ForeColor = Color.Tomato;
             label2.Location = new Point(344, 209);
             label2.Name = "label2";
             label2.Size = new Size(384, 23);
@@ -108,6 +98,7 @@
             // 
             // button2
             // 
+            button2.BackColor = SystemColors.ActiveCaption;
             button2.Font = new Font("맑은 고딕", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 129);
             button2.ForeColor = Color.Blue;
             button2.Location = new Point(354, 297);
@@ -115,14 +106,41 @@
             button2.Size = new Size(156, 60);
             button2.TabIndex = 6;
             button2.Text = "Git Hub";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Yellow;
+            button3.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            button3.ForeColor = Color.Blue;
+            button3.Location = new Point(76, 318);
+            button3.Name = "button3";
+            button3.Size = new Size(182, 53);
+            button3.TabIndex = 7;
+            button3.Text = "사진 변경";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(40, 31);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(264, 270);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            pictureBox1.Tag = "Original";
+            pictureBox1.MouseEnter += pictureBox1_MouseEnter;
+            pictureBox1.MouseLeave += pictureBox1_MouseLeave;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -142,10 +160,11 @@
 
         private Button button1;
         private Label 김수환;
-        private PictureBox pictureBox1;
         private Label label1;
         private Label label2;
         private Label label3;
         private Button button2;
+        private Button button3;
+        private PictureBox pictureBox1;
     }
 }

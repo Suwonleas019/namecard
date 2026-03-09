@@ -44,21 +44,39 @@ namespace WinFormsApp3
                 MessageBox.Show("오류가 발생했습니다: " + ex.Message);
             }
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
-            
-            if (pictureBox1.Tag == null || pictureBox1.Tag.ToString() == "ini1")
+            pictureBox1.BorderStyle = BorderStyle.Fixed3D;
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.BackColor = Color.DodgerBlue; // 테두리 색상 역할
+            pictureBox1.Padding = new Padding(3);     // 3픽셀 두께의 테두리 효과
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.BorderStyle = BorderStyle.None;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Padding = new Padding(0);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Tag == null || pictureBox1.Tag.ToString() == "Original")
             {
-               
-                pictureBox1.Image = Properties.Resources.ini2;
-                pictureBox1.Tag = "ini2";
+                // 두 번째 사진으로 교체
+                pictureBox1.Image = Properties.Resources.imiage2;
+                pictureBox1.Tag = "imiage2";
+
+                // 버튼 텍스트도 센스 있게 바꿔줄 수 있습니다.
+                button3.Text = "사진 변경";
             }
             else
             {
-               
-                pictureBox1.Image = Properties.Resources.ini1;
-                pictureBox1.Tag = "ini1";
+                // 다시 첫 번째 사진으로 교체
+                pictureBox1.Image = Properties.Resources.imiage1;
+                pictureBox1.Tag = "Original";
+
+                button3.Text = "사진 변경";
             }
         }
     }

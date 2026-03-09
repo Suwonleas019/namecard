@@ -63,9 +63,9 @@ namespace WinFormsApp3.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap ini1 {
+        internal static System.Drawing.Bitmap imiage1 {
             get {
-                object obj = ResourceManager.GetObject("ini1", resourceCulture);
+                object obj = ResourceManager.GetObject("imiage1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace WinFormsApp3.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap ini2 {
+        internal static System.Drawing.Bitmap imiage2 {
             get {
-                object obj = ResourceManager.GetObject("ini2", resourceCulture);
+                object obj = ResourceManager.GetObject("imiage2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
